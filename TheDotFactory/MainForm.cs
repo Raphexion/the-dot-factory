@@ -1168,7 +1168,14 @@ namespace TheDotFactory
         // get the font name and format it
         private string getFontName(ref Font font)
         {
-            return scrubVariableName(font.Name + "_" + Math.Round(font.Size) + "pt");
+            if (font.Bold)
+            {
+                return scrubVariableName(font.Name + "_Bold_" + Math.Round(font.Size) + "pt");
+            }
+            else
+            {
+                return scrubVariableName(font.Name + "_" + Math.Round(font.Size) + "pt");
+            }
         }
 
         // convert bits to bytes according to desc format
