@@ -1719,6 +1719,8 @@ namespace TheDotFactory
                                                     m_commentEndString);
             }
 
+            resultTextSource += "#include \"font_help.h\"" + nl + nl;
+
             // populate the font info
             FontInfo fontInfo = populateFontInfo(font);
 
